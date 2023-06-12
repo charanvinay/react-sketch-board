@@ -1,38 +1,86 @@
-.App {
-  text-align: center;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+:root{
+  --primary: #176ede
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif !important;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.toolbar{
+  width: 95%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin: 15px 0px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  transform: translateX(-50%);
+  transition: opacity .5s;
+  padding: 10px;
+  box-shadow: 0px 1px 8px rgb(23 110 222 / 10%) !important;
 }
 
-.App-link {
-  color: #61dafb;
+.color, input[type="color"]{
+  height: 30px;
+  width: 30px;
+  border-radius: 20%;
+  cursor: pointer;
+  transition: transform .5s;
+  border: 2px solid rgb(214, 214, 214);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input[type="color"]{
+  border: 1px solid rgb(214, 214, 214);
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 4px;
+}
+
+.color-picker{
+  border-radius: 10px;
+  padding: 4px;
+  transition: transform .5s;
+  border: 1px solid rgb(214, 214, 214);
+}
+
+.color.active{
+  border: 3px solid rgb(214, 214, 214);
+}
+
+.size{
+  background-color: grey;
+  transition: transform .5s;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.size.active{
+  border: 3px solid rgb(214, 214, 214);
+}
+.size.sm{
+  width: 10px;
+  height: 10px
+}
+
+.size.md{
+  width: 15px;
+  height: 15px
+}
+.size.lg{
+  width: 20px;
+  height: 20px
+}
+
+.color:hover, .size:hover{
+  transform: scale(1.2);
+}
+
+.MuiButtonBase-root.MuiButton-root{
+  text-transform: none;
+  letter-spacing: 0;
 }
